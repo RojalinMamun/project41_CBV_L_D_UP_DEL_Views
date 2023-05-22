@@ -7,8 +7,8 @@
 {% block body_block %}
 <h1>Details of {{sclobject.name}} object</h1>
 <h1>Name of School is {{sclobject.name}}</h1>
-<h1>Principal of school is {{sclobject.principal}}</h1>
-<h1>Location of school is {{sclobject.location}}</h1>
+<h1>Principal of school is {{sclobject.Principal}}</h1>
+<h1>Location of school is {{sclobject.Location}}</h1>
 
   <h1>Details of Students are</h1>
 
@@ -17,4 +17,12 @@
      <h6>age of student is {{i.sage}}</h6>
 
   {% endfor %}
+
+<h4><a href="{% url 'SchoolUpdate' pk=sclobject.pk %}"class="btn btn-info">Updatedata</a></h4>
+<h4><a href="{% url 'SchoolDelete' pk=sclobject.pk %}"class="btn btn-success">Deletedata</a></h4>
+
+
+
+
+
 {% endblock %}
